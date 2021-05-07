@@ -28,9 +28,10 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
 import androidx.navigation.findNavController
 import androidx.navigation.ui.NavigationUI
+import com.example.android.navigation.base.BaseFragment
 import com.example.android.navigation.databinding.FragmentTitleBinding
 
-class TitleFragment : Fragment() {
+class TitleFragment : BaseFragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         val binding: FragmentTitleBinding = DataBindingUtil.inflate(

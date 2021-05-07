@@ -24,9 +24,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.findNavController
+import com.example.android.navigation.base.BaseFragment
 import com.example.android.navigation.databinding.FragmentGameBinding
 
-class GameFragment : Fragment() {
+class GameFragment : BaseFragment() {
     data class Question(
             val text: String,
             val answers: List<String>)

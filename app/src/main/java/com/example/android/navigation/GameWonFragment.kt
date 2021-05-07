@@ -33,15 +33,20 @@ import androidx.navigation.findNavController
 import com.example.android.navigation.databinding.FragmentGameWonBinding
 import android.content.pm.ResolveInfo
 import android.content.pm.PackageManager
+import com.example.android.navigation.base.BaseFragment
 
 
-
-class GameWonFragment : Fragment() {
+class GameWonFragment : BaseFragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
         val binding: FragmentGameWonBinding = DataBindingUtil.inflate(
                 inflater, R.layout.fragment_game_won, container, false)
+
+        //TODO (5): crea y reporta el evento de ganar
+
+        huaweiAnalyticsInstance.onEvent("event_won",Bundle())
+
         binding.nextMatchButton.setOnClickListener { view: View ->
             view.findNavController().navigate(
                     GameWonFragmentDirections.actionGameWonFragmentToGameFragment())

@@ -27,11 +27,15 @@ buildscript {
     repositories {
         google()
         jcenter()
+        //TODO (1): Agregar repositorio maven y classpath
+        maven {url 'https://developer.huawei.com/repo/'}
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:4.0.1'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$version_kotlin"
         classpath "androidx.navigation:navigation-safe-args-gradle-plugin:$version_navigation"
+        //TODO (1): Agregar repositorio maven y classpath
+        classpath 'com.huawei.agconnect:agcp:1.4.2.300'
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
@@ -42,6 +46,8 @@ allprojects {
     repositories {
         google()
         jcenter()
+        //TODO (1): Agregar repositorio maven y classpath
+        maven {url 'https://developer.huawei.com/repo/'}
     }
 }
 
